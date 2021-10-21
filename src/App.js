@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Todo App</h2>
+      <h2>To Do App</h2>
       <Form addTodos={setTodos} todos={todos} />
       <div className="container">
         <List todos={todos} />

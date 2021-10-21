@@ -2,7 +2,10 @@
 
 .listContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.inputContainer {
 }
 input[type="text"] {
   border: none;
@@ -10,7 +13,7 @@ input[type="text"] {
   color: var(--primary);
   border-bottom: 1px solid var(--gray);
   padding: 5px 10px;
-  width: 20vw;
+  width: 30vw;
 }
 
 input::placeholder {
@@ -30,8 +33,21 @@ button {
   cursor: pointer;
 }
 
-button:active,
-button:hover {
+.addButton:active,
+.addButton:hover {
   border: 1px solid var(--white);
   color: var(--primary);
+}
+
+.addButton {
+  margin-left: 10px;
+}
+.cancelButton {
+  position: relative;
+  background-color: var(--primary);
+  right: 0px;
+}
+.cancelButton:hover,
+.cancelButton:focus {
+  border: 1px solid var(--white);
 }

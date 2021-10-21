@@ -28,15 +28,21 @@ function Form({ addTodos, todos }) {
   };
   return (
     <div className="listContainer">
-      <input
-        placeholder="Write your job"
-        type="text"
-        name="todo"
-        value={todo}
-        onChange={getTodo}
-      />
-      <button onClick={addSubmit}>Add</button>
-      <button onClick={clearAll}> Clear All</button>
+      <div className="inputContainer">
+        <input
+          placeholder="Write your plans"
+          type="text"
+          name="todo"
+          value={todo}
+          onChange={getTodo}
+        />
+        <button className="addButton" onClick={addSubmit}>
+          Add
+        </button>
+      </div>
+      <button className="cancelButton" onClick={clearAll}>
+        Clear All
+      </button>
     </div>
   );
 }
