@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./Form.css";
+
 function Form({ addTodos, todos }) {
   const [todo, setTodo] = useState("");
 
@@ -20,7 +22,7 @@ function Form({ addTodos, todos }) {
     setTodo("");
   };
   return (
-    <div>
+    <div className="listContainer">
       <input
         placeholder="Write your job"
         type="text"
