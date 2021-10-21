@@ -21,6 +21,11 @@ function Form({ addTodos, todos }) {
     ]);
     setTodo("");
   };
+
+  const clearAll = () => {
+    addTodos([]);
+    console.log("temizleme");
+  };
   return (
     <div className="listContainer">
       <input
@@ -31,6 +36,7 @@ function Form({ addTodos, todos }) {
         onChange={getTodo}
       />
       <button onClick={addSubmit}>Add</button>
+      <button onClick={clearAll}> Clear All</button>
     </div>
   );
 }
