@@ -1,3 +1,5 @@
+import "./List.css";
+
 function List({ todos }) {
   function doneItem(e) {
     if (e.target.style.textDecoration !== "line-through") {
@@ -15,8 +17,8 @@ function List({ todos }) {
     <div>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>
-            <p onClick={doneItem}>{todo.text}</p>
+          <li onClick={doneItem} key={todo.id}>
+            <p>{todo.text}</p>
           </li>
         ))}
       </ul>
