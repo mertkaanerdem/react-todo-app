@@ -20,9 +20,9 @@ function App() {
   return (
     <div className="App">
       <h2>Todo App</h2>
+      <Form addTodos={setTodos} todos={todos} />
       <div className="container">
         <List todos={todos} />
-        <Form addTodos={setTodos} todos={todos} />
       </div>
     </div>
   );

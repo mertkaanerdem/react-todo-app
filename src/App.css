@@ -2,7 +2,7 @@
 
 .App {
   background-color: var(--black);
-  width: 70vw;
+  width: 50vw;
   height: 70vh;
   text-align: center;
   border-radius: 5px;
@@ -13,6 +13,7 @@
   padding: 10px;
   border: 1px solid var(--primary);
   border-radius: 5px;
+  height: 75%;
 }
 
 h2 {
