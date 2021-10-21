@@ -1,3 +1,22 @@
+@import "./colors/Colors.css";
+
 .App {
+  background-color: var(--black);
+  width: 70vw;
+  height: 70vh;
   text-align: center;
+  border-radius: 5px;
+}
+
+.container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+h2 {
+  color: var(--gray);
+  margin: 10px;
+  padding: 10px;
 }
