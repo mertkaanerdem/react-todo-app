@@ -1,16 +1,22 @@
 import { useState } from "react";
 
 function Form({ addTodos, todos }) {
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState("");
 
   const getTodo = (e) => {
-    setTodo([e.target.value]);
+    setTodo(e.target.value);
   };
 
   const addSubmit = () => {
-    if (!todo) return false;
+    if (todo == "") return false;
 
-    addTodos([...todos, todo]);
+    addTodos([
+      ...todos,
+      {
+        id: todos.length + 1,
+        text: todo.trim(),
+      },
+    ]);
     setTodo("");
   };
   return (

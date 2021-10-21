@@ -1,22 +1,22 @@
-function List({ todos, removeItem }) {
+function List({ todos }) {
   function doneItem(e) {
     if (e.target.style.textDecoration !== "line-through") {
       e.target.style.textDecoration = "line-through";
       e.target.style.opacity = ".2";
+      console.log("üstü çizildi");
     } else {
       e.target.style.textDecoration = "";
       e.target.style.opacity = "1";
+      console.log("üstü çizili değil artık");
     }
-    console.log("üstü çizildi");
   }
 
   return (
     <div>
       <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            <p onClick={doneItem}>{todo}</p>
-            <button onClick={removeItem}>Delete</button>
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            <p onClick={doneItem}>{todo.text}</p>
           </li>
         ))}
       </ul>
